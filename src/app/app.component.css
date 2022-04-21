@@ -1,0 +1,50 @@
+.example-card {
+    position: relative;
+    width: 100%;  
+    background-color: white;
+}
+
+.title {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    color: white;
+    font-size: 25px;
+}
+
+.center_code {
+    position: absolute;
+    top: 65%;
+    right: 62.5%;
+    color: black;
+    font-size: 15px; 
+    font-weight: bold;
+}
+
+.right_code {
+    position: absolute;
+    top: 73%;
+    right: 5.5%;
+    color: black;
+    font-size: 10px; 
+    font-weight: bold;
+}
+
+.vertical_code {
+    position: absolute;
+    top: 22%;
+    right: 36%;
+    color: black;
+    font-size: 9px; 
+    font-weight: bold;
+    transform: rotate(-90deg)
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+mat-grid-tile {
+    background: white;
+}
