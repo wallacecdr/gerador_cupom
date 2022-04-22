@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  valorInicial: any = 10000;
   cupons: any = [];
 
   gerarCupom(nome: String, codigo: Number) {
@@ -16,12 +17,11 @@ export class AppComponent {
     }
   }
 
-  gerarNCupons(quantidade: any) {
-    let valorInicial = 10000;
+  gerarNCupons(valorInicial: any, quantidade: any) {
+    this.valorInicial= parseInt(valorInicial);
+
     for(let i = 0; i < quantidade; i++) {
-      this.cupons.push(this.gerarCupom('LinaLuna Estética Avançada', i + valorInicial))
+      this.cupons.push(this.gerarCupom('LinaLuna Estética Avançada', i + this.valorInicial))
     }
   }
-
-  
 }

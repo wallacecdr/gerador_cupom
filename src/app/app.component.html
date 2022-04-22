@@ -1,12 +1,17 @@
-<!-- Cards with media area -->
 <mat-grid-list cols="2" rowHeight="2:1">
+
   <mat-grid-tile *ngFor="let cupom of cupons" >
-    
-    <img mat-card-sm-image src="../assets/cupom.png" >
+
+    <img mat-card-sm-image src="/gerador_cupom/assets/cupom.png" >
     <span class="center_code">{{ cupom.codigo }}</span>
     <span class="right_code">{{ cupom.codigo }}</span>
     <span class="vertical_code">{{ cupom.codigo }}</span>
+
   </mat-grid-tile>
+
 </mat-grid-list>
-<input type="number" #input>
-<button (click)="gerarNCupons(input.value)">Gerar</button>
+
+Valor Inicial: <input type="number" value={{valorInicial}} #initValue>
+Quantidade de cupons: <input type="number" #input>
+
+<button (click)="gerarNCupons(initValue.value, input.value)">Gerar</button>
